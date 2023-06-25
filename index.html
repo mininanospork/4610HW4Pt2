@@ -1,0 +1,78 @@
+<!--
+File: index.html
+GUI Assignment: HW4 Multiplication Table Part 2 for 4610
+Shawn MacFarland, UMass Lowell Computer Science, shawn_macfarland@student.uml.edu
+Copyright (c) 2023 by Shawn MacFarland. All rights reserved. All uses, copies, excerpts
+are reaserved exclusively for the author. May not be reused in anyway or cited in anyway 
+without author's explicit permission.
+created by SM 2023-06-22 5:25PM
+Instructor: Professor Wenjin Zhou
+Sources of Help: 
+Overview: This page was created for GUI 1 4610 for HW4 Pt 2. It is a single page collecting column and row boundary input to dynamically generate a multiplication table, while validating the user entered values with visual feedback using the jQueryValidation Library, and using jQuery UI Slider and Tabs.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>4160 HW3\4: Multiplication Table Generator with jQuery</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <link rel="stylesheet" href="./css/style.css">
+    </head>
+    <body>
+        <header>
+            Multiplication Table Generator
+        </header>
+        <div id="instructions">
+            <p>
+                To generate a multiplication table please enter integer values into the column and row value input fields below. The following will be excluded:
+            </p>
+            <ul>
+                <li>Integers greater than 50</li>
+                <li>Integers less than -50</li>
+                <li>Non-numeric input</li>
+            </ul>
+            <p>
+                Decimals will be rounded to the nearest whole numbers.
+            </p>
+            <p>
+                Row and Column values will be compared to determine minimum and maximum values and the results after evaluation will be used for those values, swapping where appropriate.
+                Double Click to Delete a Tab. (Not Working)
+                Multi-select is not implemented.
+            </p>
+        </div>
+        <form id="matrix_values">
+            <div id="error_msg" class="warning"></div>
+            <label for="mincol">Minimum Column Value:</label>
+            <div id="mincol_slider" class="slider"></div>
+            <input type="text" id="mincol" name="mincol">
+            <label for="maxcol">Maximum Column Value:</label>
+            <div id="maxcol_slider" class="slider"></div>
+            <input type="text" id="maxcol" name="maxcol">
+            <label for="minrow">Minimum Row Value:</label>
+            <div id="minrow_slider" class="slider"></div>
+            <input type="text" id="minrow" name="minrow">
+            <label for="maxrow">Maximum Row Value:</label>
+            <div id="maxrow_slider" class="slider"></div>
+            <input type="text" id="maxrow" name="maxrow">
+            <input id="generate" type="submit" value="Generate Multiplication Table">
+        </form>
+        <div id="tabs">
+            <ul id="tabnav">
+                    <li><a href="#current">Current</a></li>
+            </ul>
+            <div id="current">
+                <div id="outputTitle"></div>
+                <div id="output"></div>
+            </div> 
+        </div>
+        <footer>
+            <a href="https://www.uml.edu/catalog/courses/comp/4610">Comp.4160</a> Graphical User Interface
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.7.0.min.js"  integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="  crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+        <script src="./js/main.js"></script> 
+    </body>
+</html>

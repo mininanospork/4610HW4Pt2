@@ -1,0 +1,110 @@
+/*
+File: style.css
+GUI Assignment: HW4 Pt 2 for 4610
+hawn MacFarland, UMass Lowell Computer Science, shawn_macfarland@student.uml.edu
+Copyright (c) 2023 by Shawn MacFarland. All rights reserved. All uses, copies, excerpts
+are reaserved exclusively for the author. May not be reused in anyway or cited in anyway 
+without author's explicit permission.
+created by SM 2023-06-22 5:25PM
+Instructor: Professor Wenjin Zhou
+*/
+
+body {
+    font-size: 120%;
+    font-family: Roboto, "Open Sans", sans-serif;
+    background-color:#8ecae6;
+}
+header, h1 {
+    font-size: 300%;
+    font-family: Roboto, "Open Sans", sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#instructions, #output {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 40px 20px;
+}
+
+#output {
+    padding:0;
+    width:600px;
+    height:400px;
+    overflow:auto;
+}
+
+p {
+    margin: auto 20px;
+}
+
+form {
+    display:grid;
+    grid-template-columns: 1fr 225px 1fr 1fr 1fr;
+    grid-gap: 12px;
+    padding-bottom: 50px;
+}
+
+label {
+    grid-column: 2/3;
+    text-align: right;
+}
+
+#slider {
+    grid-column: 3/4;
+}
+
+input {
+    grid-column: 4/5;
+    border-radius: 5px;
+}
+
+#generate {
+    grid-column: 4/5;
+    border-radius: 5px;
+    background-color: #023047;
+    color: #FFFFFF;
+}
+.message {
+    grid-column: 2/5;
+    background-color:#FFB703;
+    color: #000000;
+    padding: 2px 10px;
+    font-size: 12px;
+    text-align: left;
+}
+.warning {
+    grid-column: 2/4;
+    color: #FFFFFF;
+    padding: 2px 10px;
+    font-size: 20px;
+}
+
+table,tr,td {
+    border: 4px solid black;
+    border-collapse: collapse;
+    padding-left: 2px;
+}
+
+tr td
+{
+    background-color: #FFFFFF;
+}
+
+tr:nth-child(1) td {
+    background-color: #faedcd;
+}
+
+td:first-child {
+    background-color: #faedcd;
+}
+
+tr:nth-child(2n+2) td:nth-child(2n+3), 
+tr:nth-child(2n+3) td:nth-child(2n+2)
+{
+    background-color: #CCCCCC;
+}
